@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/Igor/ReactNative/back/basa.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="250"/><column_width id="3" width="3422"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,5:maintasks"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE &quot;users&quot; (
+	&quot;id&quot;	INTEGER NOT NULL,
+	&quot;name&quot;	TEXT,
+	&quot;login&quot;	TEXT,
+	&quot;password&quot;	TEXT,
+	PRIMARY KEY(&quot;id&quot;)
+);
+CREATE TABLE &quot;tasks&quot; (
+	&quot;id_task&quot;	INTEGER NOT NULL,
+	&quot;header&quot;	TEXT,
+	&quot;description&quot;	TEXT,
+	&quot;date_of_creation&quot;	TEXT,
+	&quot;owner&quot;	INTEGER,
+	&quot;completed&quot;	INTEGER,
+	PRIMARY KEY(&quot;id_task&quot;),
+	Foreign key (&quot;owner&quot;) REFERENCES users(&quot;id&quot;)
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
