@@ -20,6 +20,12 @@ app.get("/users", async (req, res) => {
     res.status(200).json({ users });
 
 });
+
+app.get("/users/:login", async (req, res) => {
+    const users = await db.getCurrentUserID(req.params.login);
+    res.status(200).json({ users });
+});
+
 app.get("/users/:id", async (req, res) => {
     const users = await db.getCurrentUser(req.params.id);
     res.status(200).json({ users });
